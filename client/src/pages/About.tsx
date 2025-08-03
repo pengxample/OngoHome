@@ -2,9 +2,15 @@ import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
+import { useQuery } from "@tanstack/react-query";
 import { MapPin, DollarSign, Package, Users, Check } from "lucide-react";
+import type { Store } from "@shared/schema";
 
 export default function About() {
+  const { data: stores } = useQuery<Store[]>({
+    queryKey: ["/api/stores"],
+  });
+
   const fadeInUp = {
     initial: { opacity: 0, y: 60 },
     animate: { opacity: 1, y: 0 },
@@ -17,6 +23,12 @@ export default function About() {
         staggerChildren: 0.2
       }
     }
+  };
+
+  // Create Google Maps embed URL showing Sweden with ONGO store locations
+  const createMapsUrl = () => {
+    // Center map on Sweden and show general area where ONGO stores are located
+    return "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2016128.2948634438!2d13.064453159648805!3d59.32932049314647!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465f763119640bcb%3A0xa80d27d3679d7766!2sSweden!5e0!3m2!1sen!2sse!4v1754245400000!5m2!1sen!2sse";
   };
 
   const values = [
@@ -179,6 +191,56 @@ export default function About() {
               </div>
             </div>
           </motion.div>
+        </div>
+      </section>
+
+      {/* Store Locations Map */}
+      <section className="ongo-section-padding bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div className="text-center mb-16" {...fadeInUp}>
+            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
+              Våra butiker
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              ONGO finns på strategiska platser från Göteborg till Sundsvall. 
+              Hitta din närmaste butik på kartan nedan.
+            </p>
+          </motion.div>
+
+          <motion.div {...fadeInUp}>
+            <Card className="overflow-hidden shadow-2xl">
+              <div className="h-96 lg:h-[500px] w-full">
+                <iframe
+                  src={createMapsUrl()}
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="ONGO Butiker"
+                ></iframe>
+              </div>
+            </Card>
+          </motion.div>
+
+          {stores && (
+            <motion.div className="mt-12 grid md:grid-cols-2 lg:grid-cols-3 gap-6" {...fadeInUp}>
+              {stores.map((store, index) => (
+                <Card key={store.id} className="ongo-card">
+                  <CardContent className="p-6">
+                    <h3 className="font-semibold text-foreground mb-2 flex items-center">
+                      <MapPin className="w-4 h-4 text-primary mr-2" />
+                      {store.name}
+                    </h3>
+                    <p className="text-gray-600 mb-1">{store.address}</p>
+                    <p className="text-gray-600 mb-3">{store.postalCode} {store.city}</p>
+                    <p className="text-sm text-gray-500">{store.openingHours}</p>
+                  </CardContent>
+                </Card>
+              ))}
+            </motion.div>
+          )}
         </div>
       </section>
 

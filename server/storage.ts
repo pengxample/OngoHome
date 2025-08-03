@@ -220,63 +220,63 @@ export class MemStorage implements IStorage {
     // Stores
     const storesData: InsertStore[] = [
       {
-        name: "ONGO Stockholm",
-        address: "Kungsgatan 12",
-        city: "Stockholm",
-        postalCode: "111 43",
-        phone: "08-123 456 78",
-        latitude: 59.3293,
-        longitude: 18.0686,
-        openingHours: "Mån-Fre 10-19, Lör 10-17, Sön 11-16"
-      },
-      {
-        name: "ONGO Göteborg",
-        address: "Avenyn 45",
-        city: "Göteborg",
-        postalCode: "411 36",
-        phone: "031-123 456 78",
-        latitude: 57.7089,
-        longitude: 11.9746,
-        openingHours: "Mån-Fre 10-19, Lör 10-17, Sön 11-16"
-      },
-      {
-        name: "ONGO Malmö",
-        address: "Södergatan 32",
-        city: "Malmö",
-        postalCode: "211 34",
-        phone: "040-123 456 78",
-        latitude: 55.6059,
-        longitude: 13.0007,
-        openingHours: "Mån-Fre 10-19, Lör 10-17, Sön 11-16"
-      },
-      {
-        name: "ONGO Uppsala",
-        address: "Stora Torget 8",
-        city: "Uppsala",
-        postalCode: "753 10",
-        phone: "018-123 456 78",
-        latitude: 59.8586,
-        longitude: 17.6389,
-        openingHours: "Mån-Fre 10-19, Lör 10-17, Sön 11-16"
-      },
-      {
-        name: "ONGO Västerås",
-        address: "Kopparbergsvägen 15",
-        city: "Västerås",
-        postalCode: "722 15",
-        phone: "021-123 456 78",
-        latitude: 59.6099,
-        longitude: 16.5448,
-        openingHours: "Mån-Fre 10-19, Lör 10-17, Sön 11-16"
-      },
-      {
-        name: "ONGO Sundsvall",
-        address: "Stora Gatan 22",
+        name: "ONGO Birsta City",
+        address: "Birsta City",
         city: "Sundsvall",
-        postalCode: "852 30",
+        postalCode: "862 31",
         phone: "060-123 456 78",
-        latitude: 62.3908,
-        longitude: 17.3069,
+        latitude: 62.4315,
+        longitude: 17.3537,
+        openingHours: "Mån-Fre 10-19, Lör 10-17, Sön 11-16"
+      },
+      {
+        name: "ONGO Borås Knalleland",
+        address: "Knalleland",
+        city: "Borås",
+        postalCode: "506 30",
+        phone: "033-123 456 78",
+        latitude: 57.7210,
+        longitude: 12.9401,
+        openingHours: "Mån-Fre 10-19, Lör 10-17, Sön 11-16"
+      },
+      {
+        name: "ONGO Västra Frölunda",
+        address: "Västra Frölunda",
+        city: "Göteborg",
+        postalCode: "421 42",
+        phone: "031-123 456 78",
+        latitude: 57.6482,
+        longitude: 11.9264,
+        openingHours: "Mån-Fre 10-19, Lör 10-17, Sön 11-16"
+      },
+      {
+        name: "ONGO Skäggetorp",
+        address: "Skäggetorp",
+        city: "Linköping",
+        postalCode: "583 34",
+        phone: "013-123 456 78",
+        latitude: 58.4010,
+        longitude: 15.6212,
+        openingHours: "Mån-Fre 10-19, Lör 10-17, Sön 11-16"
+      },
+      {
+        name: "ONGO Torp köpcentrum",
+        address: "Torp köpcentrum",
+        city: "Uddevalla",
+        postalCode: "451 50",
+        phone: "0522-123 456 78",
+        latitude: 58.3477,
+        longitude: 11.9428,
+        openingHours: "Mån-Fre 10-19, Lör 10-17, Sön 11-16"
+      },
+      {
+        name: "ONGO Heron City",
+        address: "Heron City, Kungens Kurva",
+        city: "Stockholm",
+        postalCode: "141 75",
+        phone: "08-123 456 78",
+        latitude: 59.2587,
+        longitude: 17.9421,
         openingHours: "Mån-Fre 10-19, Lör 10-17, Sön 11-16"
       }
     ];
