@@ -1,0 +1,116 @@
+🧱 Sida-för-sida Struktur
+/ — Startsida
+Huvudsyftet är att inspirera och leda besökaren till butik.
+
+Sektioner:
+Hero
+
+Rubrik:
+“Allt du behöver för hemmet och fritiden – alltid till rätt pris”
+
+CTA: “Se våra erbjudanden i butik”
+
+Stor bild eller video med utvalda produkter eller butiksbilder
+
+Kategorier
+
+Rutnät med 4–6 stora kort:
+Ex: Trädgård, Städ, Kök, Fritid, Badrum
+
+Bild + rubrik + "Utforska" (leder till /kategori/namn)
+
+Kampanjer
+
+Slider eller sektion för aktuella erbjudanden
+
+Kampanjkort: Produktbild, kampanjtext, pris (valfritt), "Finns i butik"
+
+Så här fungerar det
+
+Ikonrader:
+✓ Gå in i butik
+✓ Ta del av våra låga priser
+✓ Inget medlemskap behövs
+✓ Byggt för hela Sverige
+
+Butikssökare
+
+CTA + knapp: “Hitta din närmaste butik”
+
+Länk till /butiker med interaktiv karta
+
+/kategori/[slug] — Produktsida för kategori
+Rubrik = Kategorinamn (t.ex. “Förvaring”)
+
+Grid med produkter (bild, namn, ev. pris)
+
+Ingen varukorg, köpknapp eller e-handelsfunktion
+
+Hover-effekt: Förstora bild + ev. "Finns i butik"
+
+/produkt/[slug] — Produktsida
+Stor produktbild eller bildgalleri
+
+Titel, kort beskrivning, ev. pris
+
+Text: “Tillgänglig i utvalda butiker”
+
+CTA: “Se öppettider” (länkar till /butiker)
+
+/om-oss — Om Ongo
+Kort text om Ongo som butikskedja:
+
+Prisvärda produkter för hem & fritid
+
+Fokus på rätt pris – inget krångel
+
+Butiker runt om i landet
+
+Ikoner: Pris, Sortiment, Fysisk butik, Kundfokus
+
+/butiker — Butikssökare
+Interaktiv karta med butikspunkter
+
+Sökfält eller dropdown: Välj ort
+
+Visar adress, öppettider, ev. Google Maps-länk
+
+⚙️ Funktionella Krav
+Ingen varukorg eller e-handel
+
+Inga köpflöden, inga “Lägg i varukorg”-knappar
+
+Alla CTA:er leder till butikssidan eller uppmuntrar besök i fysisk butik
+
+Responsiv design:
+
+Mobilanpassad meny
+
+Sticky header med logotyp, meny, “Butiker” och ev. sökfunktion
+
+Prestanda:
+
+Använd next/image, lazy loading, koddelning
+
+Optimera för snabba laddtider
+
+Animationer och mikrointeraktioner:
+
+Framer Motion för fade-ins, sliderövergångar, knappfeedback
+
+Hover-effekter på produktkort och kategorier
+
+🔍 SEO & Metadata
+Dynamiska metatags per sida (Next.js metadata API)
+
+Strukturerad data:
+
+@type: Organization
+
+@type: WebSite
+
+@type: Store (på butikssidor)
+
+Öppna grafkort för sociala delningar
+
+Sitemap och robots.txt genereras automatiskt
