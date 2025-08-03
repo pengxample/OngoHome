@@ -19,13 +19,23 @@ export function Logo({ className = "", size = "md" }: LogoProps) {
   return (
     <div className={`flex items-center space-x-3 ${className}`}>
       <div className="relative flex items-center">
-        {/* Orange circle (left) - hollow */}
+        {/* Orange circle (left) - hollow with thicker border */}
         <div 
-          className="w-8 h-8 border-4 border-[#EF6C00] rounded-full relative z-10 ml-[-14px] mr-[-14px] mt-[0px] mb-[0px] pl-[0px] pr-[0px] pt-[0px] pb-[0px]"
+          className={`${sizeClasses[size]} border-8 border-[#EF6C00] rounded-full relative z-10`}
           style={{ marginRight: `-${size === 'sm' ? '8' : size === 'md' ? '12' : '16'}px` }}
-        ></div>
-        {/* Green circle (right, overlapping) - hollow */}
-        <div className={`${sizeClasses[size]} border-4 border-[#43A047] rounded-full relative z-0`}></div>
+        >
+          {/* Horizontal transparent line through center */}
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="w-full h-2 bg-white"></div>
+          </div>
+        </div>
+        {/* Green circle (right, overlapping) - hollow with thicker border */}
+        <div className={`${sizeClasses[size]} border-8 border-[#43A047] rounded-full relative z-0`}>
+          {/* Horizontal transparent line through center */}
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="w-full h-2 bg-white"></div>
+          </div>
+        </div>
       </div>
       <span className={`${textSizes[size]} font-bold text-foreground`}>ONGO</span>
     </div>
