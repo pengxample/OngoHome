@@ -33,7 +33,7 @@ export function Logo({ className = "", size = "md" }: LogoProps) {
         <div className={`${sizeClasses[size]} border-8 border-[#43A047] rounded-full relative z-0`}>
           {/* Horizontal transparent line through center */}
           <div className="absolute inset-0 flex items-center justify-center">
-            <div className="w-full h-2 bg-white"></div>
+            <div className="w-full h-1 bg-white"></div>
           </div>
         </div>
       </div>
