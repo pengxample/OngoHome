@@ -17,14 +17,17 @@ export function Logo({ className = "", size = "md" }: LogoProps) {
   };
 
   return (
-    <div className={`flex items-center space-x-1 ${className}`}>
-      <div className="relative">
-        {/* Orange circle */}
-        <div className={`${sizeClasses[size]} bg-primary rounded-full`}></div>
-        {/* Green circle overlapping */}
-        <div className={`${sizeClasses[size]} bg-secondary rounded-full absolute top-0 left-4 -ml-2`}></div>
+    <div className={`flex items-center space-x-3 ${className}`}>
+      <div className="relative flex items-center">
+        {/* Orange circle (left) */}
+        <div 
+          className={`${sizeClasses[size]} bg-[#EF6C00] rounded-full relative z-10`}
+          style={{ marginRight: `-${size === 'sm' ? '8' : size === 'md' ? '12' : '16'}px` }}
+        ></div>
+        {/* Green circle (right, overlapping) */}
+        <div className={`${sizeClasses[size]} bg-[#43A047] rounded-full relative z-0`}></div>
       </div>
-      <span className={`${textSizes[size]} font-bold text-foreground ml-2`}>ONGO</span>
+      <span className={`${textSizes[size]} font-bold text-foreground`}>ONGO</span>
     </div>
   );
 }

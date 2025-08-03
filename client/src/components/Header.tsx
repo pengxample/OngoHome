@@ -28,13 +28,13 @@ export function Header() {
           <nav className="hidden md:flex space-x-8">
             {navigation.map((item) => (
               <Link key={item.name} href={item.href}>
-                <a className={`font-medium transition-colors ${
+                <span className={`font-medium transition-colors cursor-pointer ${
                   location === item.href
                     ? 'text-primary'
                     : 'text-foreground hover:text-primary'
                 }`}>
                   {item.name}
-                </a>
+                </span>
               </Link>
             ))}
           </nav>
@@ -58,8 +58,8 @@ export function Header() {
                 <nav className="flex flex-col space-y-4 mt-8">
                   {navigation.map((item) => (
                     <Link key={item.name} href={item.href}>
-                      <a 
-                        className={`font-medium text-lg transition-colors ${
+                      <span 
+                        className={`font-medium text-lg transition-colors cursor-pointer ${
                           location === item.href
                             ? 'text-primary'
                             : 'text-foreground hover:text-primary'
@@ -67,7 +67,7 @@ export function Header() {
                         onClick={() => setIsOpen(false)}
                       >
                         {item.name}
-                      </a>
+                      </span>
                     </Link>
                   ))}
                   <Link href="/butiker">

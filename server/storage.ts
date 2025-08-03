@@ -75,7 +75,12 @@ export class MemStorage implements IStorage {
 
     categoriesData.forEach(cat => {
       const id = randomUUID();
-      const category: Category = { ...cat, id };
+      const category: Category = { 
+        ...cat, 
+        id,
+        description: cat.description || null,
+        imageUrl: cat.imageUrl || null
+      };
       this.categories.set(id, category);
     });
 
@@ -109,7 +114,15 @@ export class MemStorage implements IStorage {
 
     productsData.forEach(prod => {
       const id = randomUUID();
-      const product: Product = { ...prod, id };
+      const product: Product = { 
+        ...prod, 
+        id,
+        description: prod.description || null,
+        imageUrl: prod.imageUrl || null,
+        price: prod.price || null,
+        categoryId: prod.categoryId || null,
+        available: prod.available ?? null
+      };
       this.products.set(id, product);
     });
 
@@ -143,7 +156,16 @@ export class MemStorage implements IStorage {
 
     campaignsData.forEach(camp => {
       const id = randomUUID();
-      const campaign: Campaign = { ...camp, id };
+      const campaign: Campaign = { 
+        ...camp, 
+        id,
+        description: camp.description || null,
+        imageUrl: camp.imageUrl || null,
+        price: camp.price || null,
+        originalPrice: camp.originalPrice || null,
+        campaignType: camp.campaignType || null,
+        active: camp.active ?? null
+      };
       this.campaigns.set(id, campaign);
     });
 
@@ -213,7 +235,14 @@ export class MemStorage implements IStorage {
 
     storesData.forEach(store => {
       const id = randomUUID();
-      const storeRecord: Store = { ...store, id };
+      const storeRecord: Store = { 
+        ...store, 
+        id,
+        phone: store.phone || null,
+        latitude: store.latitude || null,
+        longitude: store.longitude || null,
+        openingHours: store.openingHours || null
+      };
       this.stores.set(id, storeRecord);
     });
   }
