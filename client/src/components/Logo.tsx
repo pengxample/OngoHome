@@ -26,7 +26,7 @@ export function Logo({ className = "", size = "md" }: LogoProps) {
         >
           {/* Horizontal transparent line through center */}
           <div className="absolute inset-0 flex items-center justify-center">
-            <div className="w-full h-2 bg-white"></div>
+            <div className="w-full h-2 bg-white ml-[0px] mr-[0px] pl-[40px] pr-[40px] mt-[0px] mb-[0px] pt-[0px] pb-[0px]"></div>
           </div>
         </div>
         {/* Green circle (right, overlapping) - hollow with thicker border */}
