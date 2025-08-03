@@ -21,20 +21,20 @@ export function Footer() {
           <div>
             <h3 className="font-semibold mb-4">Produkter</h3>
             <ul className="space-y-2 text-gray-400">
-              <li><Link href="/kategori/tradgard"><a className="hover:text-primary transition-colors">Trädgård</a></Link></li>
-              <li><Link href="/kategori/stad"><a className="hover:text-primary transition-colors">Städ</a></Link></li>
-              <li><Link href="/kategori/kok"><a className="hover:text-primary transition-colors">Kök</a></Link></li>
-              <li><Link href="/kategori/fritid"><a className="hover:text-primary transition-colors">Fritid</a></Link></li>
-              <li><Link href="/kategori/badrum"><a className="hover:text-primary transition-colors">Badrum</a></Link></li>
-              <li><Link href="/kategori/forvaring"><a className="hover:text-primary transition-colors">Förvaring</a></Link></li>
+              <li><Link href="/kategori/tradgard"><span className="hover:text-primary transition-colors cursor-pointer">Trädgård</span></Link></li>
+              <li><Link href="/kategori/stad"><span className="hover:text-primary transition-colors cursor-pointer">Städ</span></Link></li>
+              <li><Link href="/kategori/kok"><span className="hover:text-primary transition-colors cursor-pointer">Kök</span></Link></li>
+              <li><Link href="/kategori/fritid"><span className="hover:text-primary transition-colors cursor-pointer">Fritid</span></Link></li>
+              <li><Link href="/kategori/badrum"><span className="hover:text-primary transition-colors cursor-pointer">Badrum</span></Link></li>
+              <li><Link href="/kategori/forvaring"><span className="hover:text-primary transition-colors cursor-pointer">Förvaring</span></Link></li>
             </ul>
           </div>
 
           <div>
             <h3 className="font-semibold mb-4">Företaget</h3>
             <ul className="space-y-2 text-gray-400">
-              <li><Link href="/om-oss"><a className="hover:text-primary transition-colors">Om oss</a></Link></li>
-              <li><Link href="/butiker"><a className="hover:text-primary transition-colors">Våra butiker</a></Link></li>
+              <li><Link href="/om-oss"><span className="hover:text-primary transition-colors cursor-pointer">Om oss</span></Link></li>
+              <li><Link href="/butiker"><span className="hover:text-primary transition-colors cursor-pointer">Våra butiker</span></Link></li>
               <li><a href="#" className="hover:text-primary transition-colors">Karriär</a></li>
               <li><a href="#" className="hover:text-primary transition-colors">Pressrum</a></li>
               <li><a href="#" className="hover:text-primary transition-colors">Kontakt</a></li>

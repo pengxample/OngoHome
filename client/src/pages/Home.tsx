@@ -119,26 +119,36 @@ export default function Home() {
               initial="initial"
               animate="animate"
             >
-              {categories?.map((category) => (
-                <motion.div key={category.id} variants={fadeInUp}>
-                  <Link href={`/kategori/${category.slug}`}>
-                    <Card className="ongo-card cursor-pointer group">
-                      <CardContent className="p-6 text-center">
-                        <img 
-                          src={category.imageUrl || ""} 
-                          alt={category.name} 
-                          className="w-full h-32 object-cover rounded-xl mb-4" 
-                        />
-                        <h3 className="font-semibold text-foreground mb-2">{category.name}</h3>
-                        <p className="text-sm text-gray-500 mb-4">{category.description}</p>
-                        <div className="text-primary font-medium group-hover:text-secondary transition-colors flex items-center justify-center">
-                          Utforska <ArrowRight className="w-4 h-4 ml-1" />
-                        </div>
-                      </CardContent>
-                    </Card>
-                  </Link>
-                </motion.div>
-              ))}
+              {categories?.map((category) => {
+                const isDeals = category.slug === "veckans-erbjudanden";
+                return (
+                  <motion.div key={category.id} variants={fadeInUp}>
+                    <Link href={`/kategori/${category.slug}`}>
+                      <Card className={`ongo-card cursor-pointer group ${isDeals ? 'border-2 border-accent bg-accent/5' : ''}`}>
+                        <CardContent className="p-6 text-center">
+                          {isDeals && (
+                            <div className="bg-accent text-white px-3 py-1 rounded-full text-xs font-bold uppercase mb-3 inline-block">
+                              DEALS
+                            </div>
+                          )}
+                          <img 
+                            src={category.imageUrl || ""} 
+                            alt={category.name} 
+                            className="w-full h-32 object-cover rounded-xl mb-4" 
+                          />
+                          <h3 className={`font-semibold mb-2 ${isDeals ? 'text-accent' : 'text-foreground'}`}>
+                            {category.name}
+                          </h3>
+                          <p className="text-sm text-gray-500 mb-4">{category.description}</p>
+                          <div className={`font-medium group-hover:text-secondary transition-colors flex items-center justify-center ${isDeals ? 'text-accent' : 'text-primary'}`}>
+                            Utforska <ArrowRight className="w-4 h-4 ml-1" />
+                          </div>
+                        </CardContent>
+                      </Card>
+                    </Link>
+                  </motion.div>
+                );
+              })}
             </motion.div>
           )}
         </div>

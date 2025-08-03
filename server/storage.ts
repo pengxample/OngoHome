@@ -36,16 +36,16 @@ export class MemStorage implements IStorage {
     // Categories
     const categoriesData: InsertCategory[] = [
       {
-        name: "Trädgård",
-        slug: "tradgard",
-        description: "Allt för utomhus",
-        imageUrl: "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300"
+        name: "Veckans erbjudanden",
+        slug: "veckans-erbjudanden",
+        description: "Bästa dealsen denna vecka",
+        imageUrl: "https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300"
       },
       {
-        name: "Städ",
-        slug: "stad",
-        description: "Rengöring & skötsel",
-        imageUrl: "https://images.unsplash.com/photo-1563453392212-326f5d854daa?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300"
+        name: "Vardagsrum",
+        slug: "vardagsrum",
+        description: "Möbler & inredning för vardagsrummet",
+        imageUrl: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300"
       },
       {
         name: "Kök",
@@ -54,22 +54,70 @@ export class MemStorage implements IStorage {
         imageUrl: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300"
       },
       {
-        name: "Fritid",
-        slug: "fritid",
-        description: "Camping & utflykt",
-        imageUrl: "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300"
-      },
-      {
         name: "Badrum",
         slug: "badrum",
         description: "Sanitärt & tillbehör",
         imageUrl: "https://images.unsplash.com/photo-1620626011761-996317b8d101?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300"
       },
       {
+        name: "Sovrum",
+        slug: "sovrum",
+        description: "Sängar, sängkläder & förvaing",
+        imageUrl: "https://images.unsplash.com/photo-1586075010923-2dd4570fb338?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300"
+      },
+      {
+        name: "Fritid",
+        slug: "fritid",
+        description: "Camping & utflykt",
+        imageUrl: "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300"
+      },
+      {
         name: "Förvaring",
         slug: "forvaring",
         description: "Organisation & ordning",
         imageUrl: "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300"
+      },
+      {
+        name: "Städ",
+        slug: "stad",
+        description: "Rengöring & skötsel",
+        imageUrl: "https://images.unsplash.com/photo-1563453392212-326f5d854daa?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300"
+      },
+      {
+        name: "Trädgård",
+        slug: "tradgard",
+        description: "Allt för utomhus",
+        imageUrl: "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300"
+      },
+      {
+        name: "Leksaker",
+        slug: "leksaker",
+        description: "Lek & utveckling för barn",
+        imageUrl: "https://images.unsplash.com/photo-1558877385-0ef467ecb4d6?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300"
+      },
+      {
+        name: "Livsmedel",
+        slug: "livsmedel",
+        description: "Mat & dryck för hela familjen",
+        imageUrl: "https://images.unsplash.com/photo-1542838132-92c53300491e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300"
+      },
+      {
+        name: "Snacks",
+        slug: "snacks",
+        description: "Gott för mellanmål",
+        imageUrl: "https://images.unsplash.com/photo-1599490659213-e2b9527bd087?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300"
+      },
+      {
+        name: "Dekorationer",
+        slug: "dekorationer",
+        description: "Prydnader & inredningsdetaljer",
+        imageUrl: "https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300"
+      },
+      {
+        name: "Kläder",
+        slug: "klader",
+        description: "Mode för hela familjen",
+        imageUrl: "https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300"
       }
     ];
 
