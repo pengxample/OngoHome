@@ -21,7 +21,7 @@ export function Logo({ className = "", size = "md" }: LogoProps) {
       <div className="relative flex items-center">
         {/* Orange circle (left) - hollow */}
         <div 
-          className={`${sizeClasses[size]} border-4 border-[#EF6C00] rounded-full relative z-10`}
+          className="w-8 h-8 border-4 border-[#EF6C00] rounded-full relative z-10 ml-[-14px] mr-[-14px] mt-[0px] mb-[0px] pl-[0px] pr-[0px] pt-[0px] pb-[0px]"
           style={{ marginRight: `-${size === 'sm' ? '8' : size === 'md' ? '12' : '16'}px` }}
         ></div>
         {/* Green circle (right, overlapping) - hollow */}
