@@ -19,13 +19,13 @@ export function Logo({ className = "", size = "md" }: LogoProps) {
   return (
     <div className={`flex items-center space-x-3 ${className}`}>
       <div className="relative flex items-center">
-        {/* Orange circle (left) */}
+        {/* Orange circle (left) - hollow */}
         <div 
-          className={`${sizeClasses[size]} bg-[#EF6C00] rounded-full relative z-10`}
+          className={`${sizeClasses[size]} border-4 border-[#EF6C00] rounded-full relative z-10`}
           style={{ marginRight: `-${size === 'sm' ? '8' : size === 'md' ? '12' : '16'}px` }}
         ></div>
-        {/* Green circle (right, overlapping) */}
-        <div className={`${sizeClasses[size]} bg-[#43A047] rounded-full relative z-0`}></div>
+        {/* Green circle (right, overlapping) - hollow */}
+        <div className={`${sizeClasses[size]} border-4 border-[#43A047] rounded-full relative z-0`}></div>
       </div>
       <span className={`${textSizes[size]} font-bold text-foreground`}>ONGO</span>
     </div>
